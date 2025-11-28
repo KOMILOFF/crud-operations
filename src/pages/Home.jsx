@@ -25,7 +25,7 @@ const Home = () => {
   function handleSubmit(e) {
     e.preventDefault();
 
-    dispatch(postUser(user));   // 🔵 API ga yuboriladi
+    dispatch(postUser(user));
 
     setUser({
       image: "",

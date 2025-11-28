@@ -28,7 +28,7 @@ const Student = () => {
   };
 
   return (
-    <div>
+    <div className="studentsjsx-div">
       <div className="st-nav">
         <span className="nav-next">
           <BiSkipPreviousCircle className="next" />
@@ -118,8 +118,8 @@ const Student = () => {
                     </td>
 
                     <td className="actions">
-
-                      <button className="save-btn"
+                      <button
+                        className="save-btn"
                         onClick={() =>
                           dispatch(editUser({ id: u.id, data: editData }))
                         }
@@ -127,7 +127,10 @@ const Student = () => {
                         <HiOutlineSave className="save-icon" />
                       </button>
 
-                      <button className="cancel-btn" onClick={() => setEditData(null)}>
+                      <button
+                        className="cancel-btn"
+                        onClick={() => setEditData(null)}
+                      >
                         <GiCancel className="cancel-icon" />
                       </button>
                     </td>
@@ -141,10 +144,16 @@ const Student = () => {
                     <td>{u.birthday}</td>
 
                     <td className="action-div">
-                      <button className="edit-btn" onClick={() => setEditData(u)}>
-                        <FiEdit2 className="edit-icon"/>
+                      <button
+                        className="edit-btn"
+                        onClick={() => setEditData(u)}
+                      >
+                        <FiEdit2 className="edit-icon" />
                       </button>
-                      <button className="delete-btn" onClick={() => dispatch(deleteUser(u.id))}>
+                      <button
+                        className="delete-btn"
+                        onClick={() => dispatch(deleteUser(u.id))}
+                      >
                         <AiOutlineDelete className="delete-icon" />
                       </button>
                     </td>
